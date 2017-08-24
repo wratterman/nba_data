@@ -7,11 +7,11 @@ class Team < ApplicationRecord
   end
 
   def self.from_api(attr)
-    where(teamId: attr[:teamId]).first_or_create do |new_user|
-      new_user.teamId    = attr[:teamId]
-      new_user.city      = attr[:city]
-      new_user.fullName  = attr[:fullName]
-      new_user.nickname  = attr[:nickname]
+    where(nba_team_id: attr[:teamId]).first_or_create do |new_team|
+      new_team.nba_team_id    = attr[:teamId]
+      new_team.city      = attr[:city]
+      new_team.full_name  = attr[:fullName]
+      new_team.nickname  = attr[:nickname]
     end
   end
 end

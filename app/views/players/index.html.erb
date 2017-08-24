@@ -1,0 +1,7 @@
+<% @players.each do |player| %>
+  <ul>
+    <li>
+      <%= link_to player.full_name, player_path(player) %>
+    </li>
+  </ul>
+<% end %>
