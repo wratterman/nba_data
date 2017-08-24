@@ -10,6 +10,6 @@ feature "user can view all teams" do
     expect(current_path).to eq(teams_path)
     expect(page).to have_link("Atlanta Hawks")
     expect(page).to have_link("Denver Nuggets")
-    expect(page).to have_link("Minnesota Timerwolves")
+    expect(page).to have_link("Minnesota Timberwolves")
   end
 end
